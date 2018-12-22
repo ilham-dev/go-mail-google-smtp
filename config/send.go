@@ -19,11 +19,11 @@ func Send(c *gin.Context)  {
 	<head>
 	<meta http-equiv="content-type" content="text/html"; charset=ISO-8859-1">
 	</head>
-	<body>This is the body<br>
+	<body>Hellow World<br>
 	<div class="moz-signature"><i><br>
 	<br>
 	Regards<br>
-	Alex<br>
+	Ilham-Dev<br>
 	<i></div>
 	</body>
 	</html>
