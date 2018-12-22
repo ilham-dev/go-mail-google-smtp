@@ -8,8 +8,9 @@ import (
 func Send(c *gin.Context)  {
 	sender := NewSender("<Your Email>", "<Your Password>")
 
+	email := c.PostForm("email")
 	//The receiver needs to be in slice as the receive supports multiple receiver
-	Receiver := []string{c.PostForm("email")}
+	Receiver := []string{email}
 
 	Subject := "Testing HTLML Email from golang"
 	message := `
@@ -32,5 +33,5 @@ func Send(c *gin.Context)  {
 	sender.SendMail(Receiver, Subject, bodyMessage)
 
 
-	c.JSON(http.StatusOK,gin.H{"status": 200, "message": "success"})
+	c.JSON(http.StatusOK,gin.H{"status": 200, "message": "success send to "+email})
 }
